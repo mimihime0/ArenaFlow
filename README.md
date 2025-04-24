@@ -55,7 +55,7 @@ You can adjust the script's behavior by modifying the constants at the top of th
 
 * `CLASSES_TO_DETECT = [0]`
     * Filters the detections to specific object classes. YOLOv8 trained on the COCO dataset uses `0` for the 'person' class.
-    * Set this to `[0]` to *only* count people.
+    * Leave this at `[0]` to *only* count people!!!
 
 * `WARNING_THRESHOLD = 10`
     * The number of detected people above which the "WARNING: High Crowd Count!" message will appear on the screen in red text. Adjust this value based on the capacity or safety limit you want to simulate.
