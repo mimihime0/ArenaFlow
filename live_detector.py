@@ -21,12 +21,12 @@ CONFIDENCE_THRESHOLD = 0.5         # detection confidence threshold (the less th
 CLASSES_TO_DETECT = [0]            # classes to detect (0 for person)
 WARNING_THRESHOLD = 10             # number of people to trigger a warning
 FRAME_SKIP = 1                     # process every Nth frame (1 = process all)
-DISPLAY_WINDOW_NAME = "Live Crowd Detection - Error Handling"
+DISPLAY_WINDOW_NAME = "Live Crowd Detection"
 
-# Setup logging
+# setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# --- Functions ---
+# --- functions ---
 
 def load_model(model_name: str) -> YOLO | None:
     """Loads the YOLOv8 model."""
@@ -41,7 +41,7 @@ def load_model(model_name: str) -> YOLO | None:
         return None
 
 # --- main test loop ---
-def process_live_feed_with_error_handling(
+def process_live_feed(
     camera_index: int,
     model: YOLO,
     conf_threshold: float = 0.5,
@@ -138,7 +138,7 @@ def process_live_feed_with_error_handling(
 
             frame_num += 1
 
-            # heck for quit key ('q')
+            # check for quit key ('q')
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 logging.info("ℹ️ 'q' pressed, quitting.")
                 break
@@ -160,7 +160,7 @@ if __name__ == "__main__":
     model = load_model(MODEL_NAME)
     if model:
         try:
-            process_live_feed_with_error_handling(
+            process_live_feed(
                 camera_index=CAMERA_INDEX,
                 model=model,
                 conf_threshold=CONFIDENCE_THRESHOLD,
