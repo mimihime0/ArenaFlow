@@ -81,7 +81,7 @@ py live_detector.py
 ```
 4. An OpenCV window will open displaying the camera feed with detections.
 
-5. Press the 'q' key while the display window is active to quit the script gracefully.
+5. Press the 'q' key while the display window is active to quit the script.
 
 # NOTES
 The script includes a ```try...except``` block around the ```model.predict()``` call within the main processing loop. This was added because testing revealed that the prediction function could sometimes fail on specific frames from the live feed (potentially due to motion blur or complex scenes), causing the program to crash. This means that during moments of heavy movement or complex scenes that trigger the error, the people count displayed might temporarily freeze or be inaccurate because those frames are being skipped. This is a trade-off for stability in the prototype 😥. 
