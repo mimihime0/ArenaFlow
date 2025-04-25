@@ -11,7 +11,7 @@ import time
 CAMERA_INDEX = 0                   # camera index (0 for default webcam)
 MODEL_NAME = "yolov8n.pt"           # YOLOv8 model variant (try 'yolov8s.pt' if the code fails) 
 """
-options are: n, s, m, 1, x. increasing order of size/accuracy BUT slower!! 
+options are: n, s, m, l, x. increasing order of size/accuracy BUT slower!! 
 if you want to test different model variants change the letter after 'yolov8' to the letter you want.
 the default is n, it's the fastest varient BUT the least accurate. 
 the tested variants are n and s.
