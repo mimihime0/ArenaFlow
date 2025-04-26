@@ -46,7 +46,7 @@ You can adjust the script's behavior by modifying the constants at the top of th
     * Models increase in size and accuracy (n -> s -> m -> l -> x) **BUT** they also become significantly slower!!
     * If you want to test different model variants, change the letter after 'yolov8' (e.g., `"yolov8s.pt"`). The library will download the model automatically if needed.
     * **Default is 'n':** This was chosen because it's the fastest variant, best suited for real-time processing on standard hardware (like for this prototype), but it is the least accurate.
-    * **Tested variants:** 'n' and 's' were primarily tested during development.
+    * **Tested variants:** 'n', 's' and 'm' were primarily tested during development.
 
 * `CONFIDENCE_THRESHOLD = 0.5`
     * The minimum confidence score (from 0.0 to 1.0) the model needs to have for a detection to be counted.
