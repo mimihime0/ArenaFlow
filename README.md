@@ -8,7 +8,7 @@ The script counts the number of people detected in each frame and displays a vis
 
 Developed for the SCAI Hackathon, this script is a core component of our "ArenaFlow" concept, aiming to revolutionize crowd safety. This real-time detection prototype showcases the potential of AI in creating smarter, safer public spaces.
 
-## Features
+## Features 
 
 * Real-time person detection from a connected camera.
 * Live counting of detected people per frame.
